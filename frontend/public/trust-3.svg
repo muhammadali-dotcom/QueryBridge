@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="40" viewBox="0 0 140 40" fill="none">
+  <rect width="140" height="40" rx="6" fill="#ffffff" opacity="0.06" />
+  <path d="M18 12h18v16H18z" fill="#ffffff" opacity="0.16" />
+  <text x="60" y="25" font-family="Inter, Arial, sans-serif" font-size="12" fill="#ffffff">Transit</text>
+</svg>
