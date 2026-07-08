@@ -5,7 +5,10 @@
   "scripts": {
     "predev": "sh ./scripts/kill_ports.sh",
     "dev": "concurrently \"npm run dev --prefix backend\" \"PORT=3000 npm run dev --prefix frontend\"",
-    "start": "npm run dev --prefix backend & PORT=3000 npm run dev --prefix frontend"
+    "start": "npm run dev --prefix backend & PORT=3000 npm run dev --prefix frontend",
+    "capture": "node scripts/capture-screenshots.js",
+    "record": "node scripts/record-demo.js",
+    "test:readme": "vitest run scripts/__tests__/"
   },
   "dependencies": {
     "cors": "^2.8.6",
@@ -15,6 +18,9 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.14",
-    "concurrently": "^8.0.1"
+    "concurrently": "^8.0.1",
+    "@playwright/test": "1.44.0",
+    "fast-check": "3.19.0",
+    "vitest": "1.6.0"
   }
 }
