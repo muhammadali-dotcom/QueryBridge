@@ -27,7 +27,7 @@ const generateSQL = async (naturalLanguageQuery, schemaDescription) => {
   const systemPrompt = `You are an expert SQL query generator. ONLY produce safe SELECT queries using the schema below.\n\nDatabase Schema:\n${schemaDescription}`;
 
   const response = await groq.chat.completions.create({
-    model: 'openai/gpt-oss-120b',
+    model: 'llama3-70b-8192',
     temperature: 0.3,
     max_tokens: 1024,
     messages: [
@@ -48,7 +48,7 @@ const getQueryExplanation = async (sqlQuery) => {
   const groq = ensureClient();
 
   const response = await groq.chat.completions.create({
-    model: 'openai/gpt-oss-120b',
+    model: 'llama3-70b-8192',
     temperature: 0.5,
     max_tokens: 256,
     messages: [{ role: 'user', content: `Explain briefly: ${sqlQuery}` }],

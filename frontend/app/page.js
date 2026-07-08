@@ -62,6 +62,12 @@ export default function Page() {
         <textarea
           value={text}
           onChange={(e) => setText(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && !e.shiftKey) {
+              e.preventDefault();
+              if (!loading && text.trim()) handleRun();
+            }
+          }}
           placeholder="Ask anything about your database..."
         />
 

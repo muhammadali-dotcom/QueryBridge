@@ -8,6 +8,7 @@
 		"start": "next start -p 3000"
 	},
 	"dependencies": {
+		"@next/swc-darwin-arm64": "^16.2.10",
 		"framer-motion": "^10.12.16",
 		"next": "^13.5.0",
 		"react": "^18.2.0",
