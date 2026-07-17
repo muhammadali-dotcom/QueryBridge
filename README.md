@@ -51,37 +51,6 @@ QueryBridge lets you type a plain-English question, instantly generates a safe S
 </tr>
 </table>
 
-### Updating Demo Media
-
-To re-record the demo video or re-capture the workflow screenshots (e.g., after a UI change), follow these steps:
-
-**Requirements:**
-- Minimum screen/viewport: 1280 × 720 px (recommended: 1440 × 900 px)
-- Target directory: `docs/media/`
-- File naming convention (do not rename):
-  - `step-1-landing.png` — empty query input box visible
-  - `step-2-input.png` — natural-language question typed in the query box
-  - `step-3-sql-preview.png` — Generated SQL panel visible after clicking Run
-  - `step-4-results.png` — results table populated with data rows
-
-**Capture the four workflow steps in order:**
-
-1. **Step 1 — Landing:** The app is loaded and the query input box is empty. No SQL or results are shown.
-2. **Step 2 — Input:** A natural-language question has been typed (e.g., "Display top 10 customers") but Run has not been clicked yet.
-3. **Step 3 — SQL Preview:** The Run button has been clicked; the Generated SQL panel is visible with a SQL statement.
-4. **Step 4 — Results:** The results table is fully populated with at least three rows of data.
-
-**Using the capture scripts:**
-
-```sh
-# From the repository root, with both backend and frontend running:
-npm run capture   # captures step-1-landing, step-2-input, step-3-sql-preview, step-4-results
-npm run record    # records demo.mp4 (15–20 s) and converts to H.264 MP4
-```
-
-See `scripts/capture-screenshots.js` and `scripts/record-demo.js` for implementation details.
-
----
 
 ## 🔄 How It Works
 
